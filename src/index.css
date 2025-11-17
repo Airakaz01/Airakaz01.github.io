@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vos animations personnalisées */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+/* ... toutes les autres animations */
+
+.animate-float-1 { animation: float-1 20s ease-in-out infinite; }
+.animate-float-2 { animation: float-2 25s ease-in-out infinite; }
+.animate-float-3 { animation: float-3 15s ease-in-out infinite; }
+/* ... autres classes d'animation */
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(to bottom, #9333ea, #db2777); 
+  border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: linear-gradient(to bottom, #7c3aed, #be185d); 
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: rgba(168, 85, 247, 0.3); }
