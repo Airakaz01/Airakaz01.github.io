@@ -574,20 +574,18 @@ const ExperienceSection = ({ setActiveSection }) => {
   const experiences = [
     {
       date: 'Juin - Septembre 2025',
-      title: 'Projet de Fin d\'Année : Pipeline Vision par Ordinateur',
+      title: 'Projet de Fin d\'Année : Pipeline de Vision par Ordinateur pour l\'Analyse de Linéaires',
       company: 'SC-INC',
       location: 'Hybride',
       type: 'PFA - Deep Learning',
       duration: '4 mois',
-      description: 'Conception et développement d\'un pipeline de Deep Learning pour l\'analyse stratégique d\'images complexes. Forte implication en architecture logicielle et traitement de données.',
+      description: 'Conception d\'un pipeline Deep Learning pour l\'automatisation de l\'analyse stratégique de linéaires complexes, remplaçant les audits manuels.',
       achievements: [
-        'Implémentation de modèles de détection d\'objets (Faster R-CNN, YOLOv8) et classification (PyTorch)',
-        'Gestion avancée de la préparation de données pour +500 images et +100k annotations',
-        'Développement d\'une application (Streamlit) pour la visualisation des résultats et l\'analyse',
-        'Amélioration de la précision de détection grâce à des techniques d\'augmentation de données',
-        'Déploiement du pipeline complet avec optimisation des performances'
+        'Optimisé un pipeline multi-modèles (Faster R-CNN R-101 FPN, tiling pour petits objets; ResNet-18 : 97% précision; YOLOv8n) pour environnements denses',
+        'Géré la préparation et l\'annotation d\'un dataset propriétaire (524 images, +114k annotations) avec CVAT (prétraitement, augmentations robustes)',
+        'Développé une application Streamlit pour la mesure automatisée de la Part de Linéaire et l\'audit de conformité, offrant des analyses rapides et objectives'
       ],
-      technologies: ['Python', 'PyTorch', 'YOLOv8', 'Faster R-CNN', 'OpenCV', 'Streamlit', 'Computer Vision', 'Deep Learning'],
+      technologies: ['Python', 'PyTorch', 'Faster R-CNN R-101 FPN', 'ResNet-18', 'YOLOv8n', 'CVAT', 'Streamlit', 'Computer Vision', 'Deep Learning'],
       tags: ['Deep Learning', 'Computer Vision', 'Object Detection', 'Image Classification'],
       icon: Brain,
       gradient: 'from-cyan-500 to-indigo-500'
@@ -966,7 +964,6 @@ const CertificationsSection = () => {
 // ============= PROJECTS SECTION =============
 const ProjectsSection = () => {
   const [filter, setFilter] = useState('all');
-  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
@@ -975,17 +972,7 @@ const ProjectsSection = () => {
       title: 'Plateforme Web Intelligente & Système de Recommandation (CODEX)',
       description: 'Plateforme web avec système de recommandation CV-offre basé sur l\'IA. Modélisation ML (Random Forest, Keras) et NLP (TF-IDF) pour le matching sémantique.',
       tags: ['React', 'Spring Boot', 'MySQL', 'Machine Learning', 'NLP', 'Flask'],
-      gradient: 'from-blue-500 to-cyan-500',
-      status: 'local', // 'local', 'github', 'deployed'
-      githubUrl: null,
-      demoUrl: null,
-      detailedDescription: 'Développement complet d\'une plateforme de recrutement intelligente utilisant des algorithmes de Machine Learning pour matcher automatiquement les CVs avec les offres d\'emploi. Utilisation de techniques NLP avancées (TF-IDF, Word2Vec) pour l\'analyse sémantique.',
-      achievements: [
-        'Système de recommandation avec 85% de précision',
-        'Interface React moderne et responsive',
-        'API REST avec Spring Boot',
-        'Pipeline ML automatisé avec Flask'
-      ]
+      gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: '⚙️',
@@ -993,17 +980,7 @@ const ProjectsSection = () => {
       title: 'Maintenance Prédictive par Machine Learning & BI',
       description: 'Solution complète de préparation de données, benchmark de 10 algorithmes ML. Random Forest sélectionné avec 98.5% de précision. Dashboards Power BI.',
       tags: ['Python', 'Machine Learning', 'Random Forest', 'Power BI', 'Scikit-learn'],
-      gradient: 'from-cyan-500 to-indigo-500',
-      status: 'local',
-      githubUrl: null,
-      demoUrl: null,
-      detailedDescription: 'Projet académique de maintenance prédictive utilisant le Machine Learning pour anticiper les pannes d\'équipements industriels. Benchmark exhaustif de 10 algorithmes avec optimisation hyperparamétrique.',
-      achievements: [
-        '98.5% de précision avec Random Forest',
-        'Réduction de 40% des temps d\'arrêt',
-        'Dashboard Power BI interactif',
-        'Pipeline ETL automatisé'
-      ]
+      gradient: 'from-cyan-500 to-indigo-500'
     },
     {
       icon: '💊',
@@ -1011,17 +988,7 @@ const ProjectsSection = () => {
       title: 'Projet BI : Analyse d\'Effets Médicamenteux',
       description: 'Solution BI complète avec pipeline ETL (SSIS), cube OLAP (SSAS), et dashboards interactifs (Power BI) sur SQL Server.',
       tags: ['Power BI', 'SSIS', 'SSAS', 'SQL Server', 'ETL'],
-      gradient: 'from-indigo-500 to-blue-600',
-      status: 'local',
-      githubUrl: null,
-      demoUrl: null,
-      detailedDescription: 'Développement d\'une solution Business Intelligence complète pour l\'analyse des effets secondaires médicamenteux. Architecture Microsoft BI stack complète.',
-      achievements: [
-        'Pipeline ETL avec SSIS pour 500k+ enregistrements',
-        'Cube OLAP multidimensionnel (SSAS)',
-        'Dashboards Power BI temps réel',
-        'Optimisation des requêtes SQL Server'
-      ]
+      gradient: 'from-indigo-500 to-blue-600'
     },
     {
       icon: '🎯',
@@ -1029,17 +996,7 @@ const ProjectsSection = () => {
       title: 'Pipeline Vision par Ordinateur (Deep Learning)',
       description: 'Pipeline de Deep Learning pour l\'analyse d\'images. Implémentation de YOLOv8, Faster R-CNN. +500 images et +100k annotations traitées.',
       tags: ['PyTorch', 'YOLOv8', 'Faster R-CNN', 'Computer Vision', 'Streamlit'],
-      gradient: 'from-blue-600 to-cyan-600',
-      status: 'local',
-      githubUrl: null,
-      demoUrl: null,
-      detailedDescription: 'Pipeline complet de Computer Vision pour la détection et classification d\'objets dans des images complexes. Utilisation de modèles state-of-the-art avec fine-tuning.',
-      achievements: [
-        'Détection d\'objets avec YOLOv8 (mAP 0.89)',
-        'Classification avec Faster R-CNN',
-        'Application Streamlit pour visualisation',
-        'Augmentation de données avancée'
-      ]
+      gradient: 'from-blue-600 to-cyan-600'
     },
     {
       icon: '🎮',
@@ -1047,17 +1004,7 @@ const ProjectsSection = () => {
       title: 'Jeu Scrabble Multijoueur',
       description: 'Application web full stack avec fonctionnalités temps réel. Architecture MVC avec Angular, ASP.NET et SQL Server.',
       tags: ['Angular', 'ASP.NET', 'SQL Server', 'Pusher', 'TypeScript'],
-      gradient: 'from-cyan-600 to-indigo-600',
-      status: 'local',
-      githubUrl: null,
-      demoUrl: null,
-      detailedDescription: 'Développement d\'un jeu Scrabble multijoueur en temps réel avec architecture full stack moderne. Gestion des parties simultanées et système de score.',
-      achievements: [
-        'Temps réel avec Pusher WebSockets',
-        'Architecture MVC scalable',
-        'Gestion multi-joueurs simultanés',
-        'Interface Angular responsive'
-      ]
+      gradient: 'from-cyan-600 to-indigo-600'
     },
     {
       icon: '📊',
@@ -1065,28 +1012,49 @@ const ProjectsSection = () => {
       title: 'Système de Recommandation & Analytics',
       description: 'Développement de systèmes de recommandation intelligents avec algorithmes de ML et analyse de données avancée.',
       tags: ['Python', 'Recommendation Systems', 'Data Analytics', 'ML'],
-      gradient: 'from-indigo-600 to-blue-500',
-      status: 'local',
-      githubUrl: null,
-      demoUrl: null,
-      detailedDescription: 'Implémentation de différents algorithmes de recommandation (Collaborative Filtering, Content-Based, Hybrid) avec analyse comparative des performances.',
-      achievements: [
-        'Collaborative Filtering (ALS)',
-        'Content-Based avec TF-IDF',
-        'Système hybride optimisé',
-        'A/B Testing et métriques'
-      ]
+      gradient: 'from-indigo-600 to-blue-500'
+    },
+    {
+      icon: '📋',
+      category: 'dev',
+      title: 'Plateforme de Gestion des Notes Academix (Full Stack)',
+      description: 'Développement Full Stack d\'une plateforme de gestion des notes pour établissements scolaires, incluant gestion des professeurs, modules, étudiants et authentification sécurisée.',
+      tags: ['Java', 'Spring Boot', 'React.js', 'MySQL', 'Spring Security', 'JWT', 'REST API', 'Tailwind CSS', 'Material UI'],
+      gradient: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: '🗣️',
+      category: 'data',
+      title: 'Reconnaissance d\'\u00c9motions Vocales (SER)',
+      description: 'Exploration et comparaison de modèles (SVM, Random Forest, LSTM) pour la reconnaissance d\'émotions vocales sur datasets combinés (CREMA-D, RAVDESS) et TESS. Extraction avancée de caractéristiques audio.',
+      tags: ['Python', 'Deep Learning', 'Machine Learning', 'SER', 'LSTM', 'SVM', 'Librosa', 'Keras'],
+      gradient: 'from-orange-400 to-red-600'
+    },
+    {
+      icon: '👤',
+      category: 'data',
+      title: 'Segmentation Faciale par Deep Learning',
+      description: 'Analyse comparative d\'architectures de Deep Learning (U-Net, PSPNet, SegNet) pour la segmentation précise des traits du visage sur le dataset LaPa, avec gestion des occlusions.',
+      tags: ['Python', 'Deep Learning', 'Computer Vision', 'Image Segmentation', 'U-Net', 'PSPNet', 'SegNet', 'TensorFlow'],
+      gradient: 'from-teal-400 to-emerald-600'
+    },
+    {
+      icon: '🛍️',
+      category: 'dev',
+      title: 'Site E-commerce "Inzo Shop" (Full Stack)',
+      description: 'Développement d\'une plateforme e-commerce attrayante et fonctionnelle. Gestion complète des produits, utilisateurs, paniers et commandes, avec une interface intuitive et un backend robuste.',
+      tags: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'Laravel', 'PHP', 'MySQL'],
+      gradient: 'from-fuchsia-500 to-rose-500'
+    },
+    {
+      icon: '📦',
+      category: 'dev',
+      title: 'Application de Gestion des Commandes "EasyOrder" (Java POO)',
+      description: 'Développement d\'une application JavaFX Full Stack pour la gestion complète des commandes, clients, produits, facturation et analyse des ventes. Intégration MySQL et architecture MVC.',
+      tags: ['Java', 'JavaFX', 'MySQL', 'JDBC', 'MVC', 'POO'],
+      gradient: 'from-lime-400 to-green-600'
     }
   ];
-
-  const getStatusBadge = (status) => {
-    const badges = {
-      local: { text: 'EN LOCAL', color: 'from-slate-600 to-slate-700', icon: Terminal },
-      github: { text: 'SUR GITHUB', color: 'from-blue-600 to-cyan-600', icon: Github },
-      deployed: { text: 'EN PRODUCTION', color: 'from-green-600 to-emerald-600', icon: Rocket }
-    };
-    return badges[status] || badges.local;
-  };
 
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
@@ -1121,212 +1089,33 @@ const ProjectsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, i) => {
-            const badge = getStatusBadge(project.status);
-            return (
-              <GlassCard key={i} className="overflow-hidden group">
-                <div className={`p-8 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                  {/* Status Badge */}
-                  <div className={`absolute top-4 right-4 px-2 sm:px-3 py-1 bg-gradient-to-r ${badge.color} clip-corner text-[10px] sm:text-xs font-bold font-tech tracking-wider flex items-center gap-1`}>
-                    <badge.icon size={12} className="sm:w-3 sm:h-3" />
-                    {badge.text}
-                  </div>
-                  
-                  <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                    {project.icon}
-                  </div>
-                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+          {filteredProjects.map((project, i) => (
+            <GlassCard key={i} className="overflow-hidden group">
+              <div className={`p-8 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
+                <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  {project.icon}
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-white font-rajdhani">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 text-sm mb-4 leading-relaxed font-rajdhani">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, j) => (
-                      <span key={j} className="px-3 py-1 bg-slate-800/50 border border-slate-700 clip-corner text-xs font-tech hover:border-blue-500/50 transition-all">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3">
-                    {/* GitHub Button - only if available */}
-                    {project.githubUrl ? (
-                      <a 
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700 clip-corner hover:border-blue-500/50 transition-all flex items-center justify-center gap-2 font-audiowide text-xs sm:text-sm"
-                      >
-                        <Github size={18} />
-                        CODE
-                      </a>
-                    ) : null}
-                    
-                    {/* Demo Button - only if deployed */}
-                    {project.demoUrl ? (
-                      <a 
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 clip-corner hover:shadow-lg hover:shadow-blue-500/30 transition-all flex items-center justify-center gap-2 font-audiowide text-xs sm:text-sm"
-                      >
-                        <ExternalLink size={18} />
-                        DÉMO
-                      </a>
-                    ) : null}
-                    
-                    {/* Details Button - always available */}
-                    <button 
-                      onClick={() => setSelectedProject(project)}
-                      className={`${
-                        !project.githubUrl && !project.demoUrl ? 'flex-1' : 'flex-1'
-                      } px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 clip-corner hover:shadow-lg hover:shadow-indigo-500/30 transition-all flex items-center justify-center gap-2 font-audiowide text-xs sm:text-sm`}
-                    >
-                      <Star size={18} />
-                      DÉTAILS
-                    </button>
-                  </div>
-                </div>
-              </GlassCard>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Project Details Modal */}
-      {selectedProject && (
-        <div 
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 sm:p-6 animate-fade-in"
-          onClick={() => setSelectedProject(null)}
-        >
-          <div 
-            className="bg-slate-900 border-2 border-blue-500/30 clip-corner max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
-            <div className={`p-6 sm:p-8 bg-gradient-to-br ${selectedProject.gradient} relative`}>
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 w-10 h-10 bg-white/20 clip-corner backdrop-blur-sm flex items-center justify-center hover:bg-white/30 transition-all"
-              >
-                <X size={20} className="text-white" />
-              </button>
+                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+              </div>
               
-              <div className="flex items-start gap-4 sm:gap-6">
-                <div className="text-5xl sm:text-6xl">
-                  {selectedProject.icon}
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    {(() => {
-                      const badge = getStatusBadge(selectedProject.status);
-                      return (
-                        <div className={`px-3 py-1 bg-white/20 clip-corner text-xs font-bold font-tech tracking-wider flex items-center gap-1.5`}>
-                          <badge.icon size={14} />
-                          {badge.text}
-                        </div>
-                      );
-                    })()}
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-black text-white mb-2 font-orbitron">
-                    {selectedProject.title}
-                  </h2>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.tags.map((tag, j) => (
-                      <span key={j} className="px-2 py-1 bg-white/20 backdrop-blur-sm clip-corner text-xs font-tech">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="p-6 sm:p-8 space-y-6">
-              {/* Description */}
-              <div>
-                <h3 className="text-xl font-bold text-cyan-400 mb-3 font-rajdhani flex items-center gap-2">
-                  <Code size={20} />
-                  DESCRIPTION COMPLÈTE
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-white font-rajdhani">
+                  {project.title}
                 </h3>
-                <p className="text-slate-300 leading-relaxed font-rajdhani">
-                  {selectedProject.detailedDescription}
-                </p>
-              </div>
-
-              {/* Achievements */}
-              <div>
-                <h3 className="text-xl font-bold text-cyan-400 mb-3 font-rajdhani flex items-center gap-2">
-                  <Star size={20} />
-                  RÉALISATIONS CLÉS
-                </h3>
-                <ul className="space-y-2">
-                  {selectedProject.achievements.map((achievement, i) => (
-                    <li key={i} className="flex items-start gap-3 text-slate-300 font-rajdhani">
-                      <div className="w-2 h-2 bg-cyan-500 clip-corner mt-2 flex-shrink-0"></div>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Technologies */}
-              <div>
-                <h3 className="text-xl font-bold text-cyan-400 mb-3 font-rajdhani flex items-center gap-2">
-                  <Layers size={20} />
-                  TECHNOLOGIES UTILISÉES
-                </h3>
+                <p className="text-slate-400 text-sm mb-4 leading-relaxed font-rajdhani">{project.description}</p>
+                
                 <div className="flex flex-wrap gap-2">
-                  {selectedProject.tags.map((tag, j) => (
-                    <span key={j} className="px-4 py-2 bg-slate-800/50 border border-slate-700 clip-corner text-sm font-tech text-slate-300 hover:border-cyan-500/50 transition-all">
+                  {project.tags.map((tag, j) => (
+                    <span key={j} className="px-3 py-1 bg-slate-800/50 border border-slate-700 clip-corner text-xs font-tech hover:border-blue-500/50 transition-all">
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-
-              {/* Action Buttons */}
-              <div className="flex gap-3 pt-4 border-t border-slate-700/50">
-                {selectedProject.githubUrl && (
-                  <a 
-                    href={selectedProject.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 px-6 py-3 bg-slate-800/50 border border-slate-700 clip-corner hover:border-blue-500/50 transition-all flex items-center justify-center gap-2 font-audiowide text-sm"
-                  >
-                    <Github size={20} />
-                    VOIR LE CODE
-                  </a>
-                )}
-                {selectedProject.demoUrl && (
-                  <a 
-                    href={selectedProject.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 clip-corner hover:shadow-lg hover:shadow-blue-500/30 transition-all flex items-center justify-center gap-2 font-audiowide text-sm"
-                  >
-                    <ExternalLink size={20} />
-                    VOIR LA DÉMO
-                  </a>
-                )}
-                {!selectedProject.githubUrl && !selectedProject.demoUrl && (
-                  <div className="flex-1 px-6 py-3 bg-slate-800/30 border border-slate-700/50 clip-corner text-center">
-                    <p className="text-slate-400 text-sm font-tech">
-                      <Terminal size={16} className="inline mr-2" />
-                      Projet réalisé en local - Non publié
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
+            </GlassCard>
+          ))}
         </div>
-      )}
+      </div>
     </section>
   );
 };
