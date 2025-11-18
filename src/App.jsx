@@ -156,75 +156,26 @@ const IconBadge = ({ icon: Icon, gradient = "from-blue-500 to-cyan-500", size = 
   </div>
 );
 
-// ============= CV DOWNLOAD MODAL =============
+// ============= CV DOWNLOAD BUTTON =============
 const CVButton = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const cvOptions = [
-    { id: "DA", title: "Data Analyst", desc: "Analyse et visualisation", icon: BarChart3, gradient: "from-blue-500 to-cyan-500" },
-    { id: "DS", title: "Data Scientist", desc: "Machine Learning et IA", icon: Brain, gradient: "from-cyan-500 to-indigo-500" },
-    { id: "DE", title: "Data Engineer", desc: "Infrastructure et pipelines", icon: Database, gradient: "from-indigo-500 to-blue-600" }
-  ];
-
-  const handleDownload = (version) => {
-    const url = CONFIG.cv[version];
-    if (!url) return;
-
+  const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = url;
-    link.download = url.split("/").pop();
+    link.href = "/assets/CV_EL_HOUARI_Zakaria.pdf";
+    link.download = "CV_EL_HOUARI_Zakaria.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    setShowModal(false);
   };
 
   return (
-    <>
-      <button
-        onClick={() => setShowModal(true)}
-        className="group px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-slate-900/80 backdrop-blur-xl border-l-4 border-cyan-500 clip-corner font-bold flex items-center gap-2 sm:gap-3 hover:border-blue-500 hover:scale-105 transition-all duration-300 text-sm sm:text-base"
-      >
-        <Download size={18} className="sm:w-5 sm:h-5 group-hover:animate-bounce" />
-        <span className="hidden sm:inline">DOWNLOAD_CV</span>
-        <span className="sm:hidden">CV</span>
-      </button>
-
-      {showModal && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowModal(false)}>
-          <GlassCard className="max-w-lg w-full p-8 animate-scale-in" onClick={(e) => e.stopPropagation()}>
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold">
-                <GradientText>Choisir la version</GradientText>
-              </h3>
-              <button onClick={() => setShowModal(false)} className="p-2 hover:bg-slate-800 rounded-xl transition-colors">
-                <X size={24} />
-              </button>
-            </div>
-            
-            <p className="text-slate-400 mb-6">Sélectionnez la version qui correspond à vos besoins</p>
-
-            <div className="space-y-4">
-              {cvOptions.map((option) => (
-                <button
-                  key={option.id}
-                  onClick={() => handleDownload(option.id)}
-                  className={`group w-full p-5 bg-gradient-to-r ${option.gradient}/10 border-l-4 border-slate-700 clip-corner hover:scale-105 hover:border-blue-500 transition-all duration-300 text-left`}
-                >
-                  <div className="flex items-center gap-4">
-                    <IconBadge icon={option.icon} gradient={option.gradient} />
-                    <div>
-                      <h4 className="font-bold text-lg text-white mb-1">{option.title}</h4>
-                      <p className="text-slate-400 text-sm">{option.desc}</p>
-                    </div>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </GlassCard>
-        </div>
-      )}
-    </>
+    <button
+      onClick={handleDownload}
+      className="group px-4 sm:px-6 md:px-8 py-3 sm:py-4 bg-slate-900/80 backdrop-blur-xl border-l-4 border-cyan-500 clip-corner font-bold flex items-center gap-2 sm:gap-3 hover:border-blue-500 hover:scale-105 transition-all duration-300 text-sm sm:text-base"
+    >
+      <Download size={18} className="sm:w-5 sm:h-5 group-hover:animate-bounce" />
+      <span className="hidden sm:inline">DOWNLOAD_CV</span>
+      <span className="sm:hidden">CV</span>
+    </button>
   );
 };
 
