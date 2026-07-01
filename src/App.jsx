@@ -5,11 +5,11 @@ const BASE_URL = import.meta.env.BASE_URL;
 const CONFIG = {
   personal: {
     name: "Zakaria EL HOUARI",
-    title: "Élève Ingénieur en Informatique et Ingénierie des Données",
-    subtitle: "Data Science, Data Engineering & Data Analytics",
+    title: "Ingénieur en Informatique et Ingénierie des Données",
+    subtitle: "Data Engineering, Data Science & IA Générative",
     school: "ENSA Khouribga",
-    year: "5ème année",
-    availability: "Recherche stage PFE (6 mois) à partir de février 2026",
+    year: "Promotion 2026",
+    availability: "Disponible · Recherche d'un premier poste (Data / IA)",
     image: "/assets/zakaria.jpg"
   },
   contact: {
@@ -24,8 +24,8 @@ const CONFIG = {
     DE: `${BASE_URL}/assets/Zakaria_EL_HOUARI_CV.pdf`
   },
   stats: [
-    { number: '10+', label: 'Projets', icon: Target },
-    { number: '2', label: 'Stages Réalisés', icon: Award },
+    { number: '12+', label: 'Projets', icon: Target },
+    { number: '3', label: 'Stages Réalisés', icon: Award },
     { number: '20+', label: 'Technologies', icon: Code },
     { number: '2026', label: 'Diplôme', icon: GraduationCap }
   ]
@@ -320,11 +320,12 @@ const HeroSection = ({ setActiveSection }) => {
           
           <div className="pl-4 sm:pl-6 md:pl-8 border-l-2 border-blue-500/30">
             <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed animate-fade-in-delayed-2 font-rajdhani">
-              <span className="text-blue-400 font-tech">&gt;_</span> Élève ingénieur en dernière année à l'ENSA Khouribga, passionné par la valorisation des données 
-              et la construction de solutions intelligentes. Maîtrise l'ensemble du cycle de vie des projets data, 
-              du <strong className="text-cyan-400 font-semibold">prétraitement et SQL</strong> à la modélisation 
-              <strong className="text-cyan-400 font-semibold"> Machine Learning (incluant Deep Learning)</strong> et la création 
-              de dashboards <strong className="text-cyan-400 font-semibold">Power BI</strong>.
+              <span className="text-blue-400 font-tech">&gt;_</span> Ingénieur en Informatique et Ingénierie des Données (ENSA Khouribga, 2026),
+              en fin de stage PFE chez <strong className="text-cyan-400 font-semibold">Capgemini Engineering</strong>.
+              Expérience concrète de bout en bout&nbsp;: pipelines data,
+              <strong className="text-cyan-400 font-semibold"> LLM/RAG</strong>,
+              <strong className="text-cyan-400 font-semibold"> optimisation</strong> et aide à la décision,
+              du prototype au <strong className="text-cyan-400 font-semibold">déploiement cloud</strong>.
             </p>
           </div>
 
@@ -444,33 +445,33 @@ const StatsSection = () => (
 // ============= ABOUT SECTION =============
 const AboutSection = ({ setActiveSection }) => {
   const skills = [
-    { 
-      icon: Brain, 
-      title: 'Data Science & ML', 
-      desc: 'Python, Machine Learning, Deep Learning, PyTorch', 
+    {
+      icon: Brain,
+      title: 'Data Science & IA Générative',
+      desc: 'Python, Machine Learning, Deep Learning, LLM/RAG',
       color: 'from-blue-500 to-cyan-500',
-      details: ['Computer Vision', 'NLP', 'Recommandation', 'Model Deployment']
+      details: ['LangChain', 'Computer Vision', 'NLP', 'Model Deployment']
     },
-    { 
-      icon: Database, 
-      title: 'Data Engineering', 
-      desc: 'SQL, ETL, Apache Kafka, Spark, Hadoop', 
+    {
+      icon: Database,
+      title: 'Data Engineering',
+      desc: 'SQL, ETL, Apache Kafka, Spark, Hadoop',
       color: 'from-cyan-500 to-indigo-500',
-      details: ['Data Pipelines', 'Big Data', 'MongoDB', 'MySQL']
+      details: ['Data Pipelines', 'Big Data', 'MongoDB', 'PostgreSQL']
     },
-    { 
-      icon: BarChart3, 
-      title: 'Business Intelligence', 
-      desc: 'Power BI, SSIS, SSAS, Tableau', 
+    {
+      icon: BarChart3,
+      title: 'Business Intelligence',
+      desc: 'Power BI, SSIS, SSAS, Tableau',
       color: 'from-indigo-500 to-blue-600',
       details: ['Dashboards', 'Reporting', 'Data Visualization', 'SQL Server']
     },
-    { 
-      icon: Code, 
-      title: 'Développement', 
-      desc: 'Java, Spring Boot, Angular, React.js', 
+    {
+      icon: Code,
+      title: 'Développement & Cloud',
+      desc: 'FastAPI, React/TypeScript, Azure, Docker',
       color: 'from-blue-600 to-cyan-600',
-      details: ['Backend', 'Frontend', 'APIs', 'DevOps']
+      details: ['Backend', 'Frontend', 'CI/CD', 'DevOps']
     }
   ];
 
@@ -511,15 +512,16 @@ const AboutSection = ({ setActiveSection }) => {
                 Vision & Mission
               </h3>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                Actuellement en dernière année d'ingénierie informatique à l'ENSA Khouribga, je me spécialise dans 
-                la Data Science, le Data Engineering et le Data Analytics. Mon parcours académique et mes expériences pratiques 
-                m'ont permis de développer une expertise solide couvrant l'ensemble du cycle de vie des projets data.
+                Ingénieur diplômé de l'ENSA Khouribga (promotion 2026), je me spécialise dans le
+                Data Engineering, la Data Science et l'IA Générative. Mon stage PFE chez Capgemini Engineering
+                et mes projets m'ont permis de développer une expertise solide couvrant l'ensemble du cycle de vie
+                des projets data, du prototype au déploiement en production.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Passionné par la valorisation des données et la construction de solutions intelligentes, j'ai eu 
-                l'opportunité de travailler sur plusieurs projets innovants, du prétraitement de données à la modélisation 
-                Machine Learning (incluant Deep Learning), en passant par la création de dashboards Power BI. Mon objectif 
-                est d'appliquer mes compétences à des projets innovants et à fort impact dans le domaine de la Data.
+                Passionné par la valorisation des données et la construction de solutions intelligentes, j'ai conçu
+                des plateformes complètes intégrant optimisation, pipelines <strong>LLM/RAG</strong> et déploiement
+                <strong> cloud (Azure, CI/CD)</strong>. Mon objectif est d'appliquer mes compétences à des projets
+                innovants et à fort impact dans le domaine de la Data et de l'IA.
               </p>
             </div>
 
@@ -572,6 +574,25 @@ const AboutSection = ({ setActiveSection }) => {
 // ============= EXPERIENCE SECTION AMÉLIORÉE =============
 const ExperienceSection = ({ setActiveSection }) => {
   const experiences = [
+    {
+      date: 'Février - Juillet 2026',
+      title: 'Stage PFE — Data & IA Générative, Supply Chain Engineering (client Stellantis)',
+      company: 'Capgemini Engineering',
+      location: 'Casablanca',
+      type: 'Stage PFE - Data & IA Générative',
+      duration: '6 mois',
+      description: 'Conception et déploiement de la Smart Warehousing Platform : digitalisation du dimensionnement des meubles kitting et de l\'analyse d\'offres fournisseurs pour le site Stellantis Kénitra.',
+      achievements: [
+        'Développé une plateforme à 6 modules : optimisation multi-objectif vectorisée NumPy, algorithme de bin-packing FFD contraint (11 règles métier validées), visualisation 3D Plotly, exports Word/Excel/DXF AutoCAD',
+        'Automatisé l\'analyse des offres fournisseurs par pipeline RAG/LLM (LangChain, GenEngine/Amazon Nova, fallback Ollama) : d\'une demi-journée à moins de 3 minutes ; génération de cahiers des charges enrichis par Knowledge Base',
+        'Industrialisé la solution : déploiement Azure App Service avec CI/CD GitHub Actions, suite pytest (226 tests), authentification OTP ; rapport Power BI d\'analyse capacitaire',
+        'Livré une seconde version en architecture découplée FastAPI + React/TypeScript (TanStack Query) pour ouvrir l\'application à des utilisateurs non-techniques'
+      ],
+      technologies: ['Python', 'FastAPI', 'React', 'TypeScript', 'LangChain', 'RAG/LLM', 'NumPy', 'Plotly', 'Azure', 'CI/CD', 'pytest', 'Power BI', 'Streamlit'],
+      tags: ['IA Générative', 'RAG/LLM', 'Optimisation', 'Cloud', 'MLOps'],
+      icon: Brain,
+      gradient: 'from-blue-500 to-cyan-500'
+    },
     {
       date: 'Juin - Septembre 2025',
       title: 'Projet de Fin d\'Année : Pipeline de Vision par Ordinateur pour l\'Analyse de Linéaires',
@@ -749,8 +770,8 @@ const SkillsSection = () => {
     },
     {
       icon: Languages,
-      title: 'NLP & Traitement de Données',
-      skills: ['NLP', 'Pandas', 'NumPy', 'Recommandation', 'TF-IDF', 'Text Mining'],
+      title: 'IA Générative & NLP',
+      skills: ['LLM', 'RAG', 'LangChain', 'Prompt Engineering', 'Ollama', 'NLP', 'TF-IDF', 'Pandas', 'NumPy'],
       color: 'from-cyan-500 to-indigo-500'
     },
     {
@@ -768,13 +789,13 @@ const SkillsSection = () => {
     {
       icon: Code,
       title: 'Développement Full Stack',
-      skills: ['React', 'Angular', 'Spring Boot', 'ASP.NET', 'Node.js', 'Express.js', 'TypeScript', 'HTML/CSS'],
+      skills: ['FastAPI', 'React', 'TypeScript', 'Streamlit', 'Spring Boot', 'Angular', 'ASP.NET', 'Node.js', 'HTML/CSS'],
       color: 'from-cyan-600 to-indigo-600'
     },
     {
       icon: Layers,
-      title: 'Outils & Méthodologies',
-      skills: ['Git/GitHub', 'Docker', 'Jira', 'Scrum', 'VS Code', 'Jupyter', 'Streamlit'],
+      title: 'DevOps, Cloud & Outils',
+      skills: ['Azure', 'Docker', 'CI/CD (GitHub Actions)', 'pytest', 'Git/GitHub', 'Jira', 'Scrum', 'Jupyter'],
       color: 'from-indigo-600 to-blue-500'
     }
   ];
@@ -819,6 +840,22 @@ const SkillsSection = () => {
 const CertificationsSection = () => {
   const certifications = [
     {
+      title: 'Developing Applications with LangChain',
+      issuer: 'DataCamp',
+      date: '2026',
+      credentialId: null,
+      icon: Brain,
+      gradient: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Power BI Fundamentals Track',
+      issuer: 'DataCamp',
+      date: '2026',
+      credentialId: null,
+      icon: BarChart3,
+      gradient: 'from-cyan-500 to-indigo-500'
+    },
+    {
       title: 'Learn Express.js',
       issuer: 'Scrimba',
       date: 'Nov 2025',
@@ -849,6 +886,14 @@ const CertificationsSection = () => {
       credentialId: 'DD-913B76E703',
       icon: BarChart3,
       gradient: 'from-blue-600 to-cyan-600'
+    },
+    {
+      title: 'MLOps Hackathon',
+      issuer: 'DataVerse - OpenSource',
+      date: '2024',
+      credentialId: null,
+      icon: Layers,
+      gradient: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Frontend for Java Full Stack Development',
@@ -942,14 +987,10 @@ const CertificationsSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-3xl mx-auto">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 gap-4 sm:gap-8 max-w-xl mx-auto">
           <div className="text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-400 font-orbitron mb-1 sm:mb-2">7+</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-cyan-400 font-orbitron mb-1 sm:mb-2">10+</div>
             <div className="text-[10px] sm:text-xs md:text-sm text-slate-500 font-tech tracking-wider">CERTIFICATIONS</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-black text-blue-400 font-orbitron mb-1 sm:mb-2">2024</div>
-            <div className="text-[10px] sm:text-xs md:text-sm text-slate-500 font-tech tracking-wider">DÉBUT</div>
           </div>
           <div className="text-center">
             <div className="text-2xl sm:text-3xl md:text-4xl font-black text-indigo-400 font-orbitron mb-1 sm:mb-2">100%</div>
@@ -966,6 +1007,14 @@ const ProjectsSection = () => {
   const [filter, setFilter] = useState('all');
 
   const projects = [
+    {
+      icon: '🏭',
+      category: 'data',
+      title: 'Smart Warehousing Platform (PFE Capgemini · Stellantis)',
+      description: 'Plateforme d\'avant-projet logistique : optimisation multi-objectif du dimensionnement des meubles (bin-packing FFD, NumPy), analyse d\'offres fournisseurs par RAG/LLM et génération de cahiers des charges. Déployée sur Azure (CI/CD), 226 tests pytest.',
+      tags: ['Python', 'FastAPI', 'React', 'LangChain', 'RAG/LLM', 'Azure', 'Plotly', 'Power BI'],
+      gradient: 'from-blue-500 to-cyan-500'
+    },
     {
       icon: '🤖',
       category: 'data',
@@ -1267,7 +1316,7 @@ const Footer = () => (
           <h4 className="text-2xl font-bold mb-4 font-orbitron">
             <GradientText>{CONFIG.personal.name}</GradientText>
           </h4>
-          <p className="text-slate-400 mb-6 font-rajdhani">Future Ingénieur en Data Science, Data Engineering & Data Analytics</p>
+          <p className="text-slate-400 mb-6 font-rajdhani">Ingénieur en Data Engineering, Data Science & IA Générative</p>
           <div className="flex gap-3">
             <a href={CONFIG.contact.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800/50 border border-slate-700 rounded-xl flex items-center justify-center hover:border-blue-500 hover:scale-110 transition-all">
               <Linkedin size={18} />
@@ -1312,7 +1361,7 @@ const Footer = () => (
       </div>
 
       <div className="text-center pt-8 border-t border-slate-800 text-slate-400">
-        <p className="font-tech text-sm">&copy; 2025 {CONFIG.personal.name}. Tous droits réservés.</p>
+        <p className="font-tech text-sm">&copy; 2026 {CONFIG.personal.name}. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
